@@ -47,6 +47,8 @@ function NewPost({ posts, setposts }) {
       console.log(res);
       if (res.data.success) {
         toast.success(res.data.message);
+        setmessage("");
+        setFiles([]);
         setposts([res.data.post, ...posts]);
       } else {
         toast.error(res.data.message);
