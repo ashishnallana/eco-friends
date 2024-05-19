@@ -21,7 +21,7 @@ const app = express();
 //middelwares
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://ecofriends-beta.vercel.app"],
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })
