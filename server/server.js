@@ -19,7 +19,13 @@ connectDB();
 const app = express();
 
 //middelwares
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:5173"],
+    methods: ["POST", "GET", "PUT"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use("/api/users", userRouter);
